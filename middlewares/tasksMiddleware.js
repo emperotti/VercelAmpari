@@ -7,7 +7,7 @@ const validateBody = (request, response, next) => {
         );
     }
 
-    if (body.name == '' || body.species == '' || body.sex == '' || body.castrated == '' || body.alive == '' || body.adopted == '') {
+    if (body.name == '' || body.species == '' || body.sex == '') {
         return response.status(400).json({ message: 'A required field is empty' });
     }
 
